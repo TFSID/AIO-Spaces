@@ -18,6 +18,6 @@ def generate_init_files(directory):
             yield init_file_path
 
 # Example usage:
-directory = "backend/"
+directory = "frontend/assets"
 for init_file_path in generate_init_files(directory):
     print("Created:", init_file_path)
