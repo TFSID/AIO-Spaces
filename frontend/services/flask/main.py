@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from bs4 import BeautifulSoup
 
+# app = Flask(__name__, static_url_path='/static')
 app = Flask(__name__)
 
 @app.route('/')
@@ -13,12 +14,16 @@ def read_html_file(file_path):
 
 @app.route('/dashboard')
 def home():
-    header = read_html_file('frontend/components/header.html')
-    sidebar = read_html_file('frontend/components/sidebar.html')
-    body = read_html_file('frontend/components/sidebar.html')
-    footer = read_html_file('frontend/components/sidebar.html')
+    # header = read_html_file('components/header.html')
+    # sidebar = read_html_file('frontend/components/sidebar.html')
+    # body = read_html_file('frontend/components/sidebar.html')
+    # footer = read_html_file('frontend/components/footer.html')
+    sidebar = render_template('components/sidebar.html')
     # footer_html = read_html_file('organisms/footer.html')
-    return render_template('dashboard.html',sidebar=sidebar)
+    template = render_template('components/header.html')
+    template += render_template('dashboard.html',sidebar=sidebar)
+    template += render_template('footer.html')
+    return template
 
 def main():
     app.run(debug=True,port=8625)
