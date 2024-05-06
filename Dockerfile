@@ -20,6 +20,7 @@ RUN pip install --no-cache -r requirements.txt
 
 # Allow installing dev dependencies to run tests
 ENV PYTHONPATH=/app
+EXPOSE 8625
 
 RUN python main.py
 

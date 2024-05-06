@@ -5,3 +5,5 @@ services:
       context: ./
       dockerfile: ./Dockerfile
     container_name: AIO-Space
+    ports:
+      - "8625:8625"
