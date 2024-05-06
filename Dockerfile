@@ -24,4 +24,4 @@ EXPOSE 8625
 
 # RUN python main.py
 
-CMD ["python", "main.py   "]
+CMD ["python", "main.py"]
