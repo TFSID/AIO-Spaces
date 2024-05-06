@@ -16,12 +16,23 @@ def read_html_file(file_path):
 @app.route('/dashboard')
 def home():
     
-    
+    navbar = render_template('components/navbar.html')
     header = render_template('components/header.html')
     sidebar = render_template('components/sidebar.html')
     footer = render_template('components/footer.html')
     # import dashboard pages
-    template = render_template('pages/dashboard.html',sidebar=sidebar, header=header)
+    template = render_template('pages/dashboard.html',sidebar=sidebar, header=header, navbar=navbar,footer=footer)
+    return template
+@app.route('/asset-pelindo')
+def assetpelindo():
+    
+    navbar = render_template('components/navbar.html')
+    header = render_template('components/header.html')
+    sidebar = render_template('components/sidebar.html')
+    footer = render_template('components/footer.html')
+    content = render_template('pages/asset-and-event/asset-pelindo.html')
+    # import dashboard pages
+    template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,footer=footer,content=content)
     return template
 
 def main():
