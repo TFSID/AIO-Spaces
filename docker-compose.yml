@@ -1,6 +1,6 @@
 services:
   tm-scraper:
-    image: aio-Spaces
+    image: aio-spaces
     build:
       context: ./
       dockerfile: ./Dockerfile
