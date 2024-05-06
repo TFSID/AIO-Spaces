@@ -22,6 +22,6 @@ RUN pip install --no-cache -r requirements.txt
 ENV PYTHONPATH=/app
 EXPOSE 8625
 
-RUN python main.py
+# RUN python main.py
 
-# CMD ["python", "main.py   "]
+CMD ["python", "main.py   "]
