@@ -84,8 +84,20 @@ def generate_dns_report():
     template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,footer=footer,content=content)
     return template
 
+@app.route('/malware')
+def generate_malware_report():
+    
+    navbar = render_template('components/navbar.html')
+    header = render_template('components/header.html')
+    sidebar = render_template('components/sidebar.html')
+    footer = render_template('components/footer.html')
+    content = render_template('pages/generate-report/malware.html')
+    # import dashboard pages
+    template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,footer=footer,content=content)
+    return template
+
 def main():
-    # app.run(debug=True,port=8625)
+    app.run(debug=True,port=8625)
     print(f'server running on port: 8625')
     # serve(app, host='0.0.0.0', port=8625,url_scheme='https', threads=4, channel_timeout=120, cleanup_interval=30)
-    serve(app, host='0.0.0.0', port=8625)
+    # serve(app, host='0.0.0.0', port=8625)

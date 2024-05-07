@@ -1,3 +1,3 @@
 # AIO-Spaces
 i dont knows
-Add By Darryl
+CopyRight By Instinct Company
