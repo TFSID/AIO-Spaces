@@ -40,7 +40,14 @@ function insertHTML(idName, filePath) {
     originalContentDiv
   );
 }
+function openPopup() {
+  document.getElementById("popupForm").style.display = "block";
+}
 
+// Fungsi untuk menutup pop-up
+function closePopup() {
+  document.getElementById("popupForm").style.display = "none";
+}
 // Example usage:
 // Assuming you have an element with the id "originalContent" and you want to insert HTML from a file named "example.html"
 

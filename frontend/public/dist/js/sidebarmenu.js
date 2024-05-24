@@ -50,3 +50,22 @@ $(function () {
     e.preventDefault();
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    var openFormBtn = document.getElementById('openFormBtn');
+    var formPopup = document.getElementById('formPopup');
+    var closeBtn = document.querySelector('.close-btn');
+
+    openFormBtn.addEventListener('click', function() {
+        formPopup.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        formPopup.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == formPopup) {
+            formPopup.style.display = 'none';
+        }
+    });
+});
