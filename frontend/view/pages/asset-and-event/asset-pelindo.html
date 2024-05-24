@@ -5,7 +5,7 @@
         <div class="page-breadcrumb">
           <div class="row">
             <div class="col-12 d-flex no-block align-items-center">
-              <h4 class="page-title">Dashboard</h4>
+              <h1 class="page-title">Dashboard</h1>
               <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
               </nav></div>
@@ -13,65 +13,72 @@
           </div>
         </div>
       
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-12">
               <div class="card">
-                <form class="form-horizontal">
-                  <div class="card-body">
-                    <h4 class="card-title">Insert Data to Add Asset Pelindo</h4>
-                    <div class="form-group row">
-                      <label for="fname" class="col-sm-3 text-end control-label col-form-label fas fa-flag"> Regional</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="fname" placeholder="Regional Here">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-desktop "> Endpoint Hostname</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="lname" placeholder="Endpoint Hostname Here">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-info-circle"> Endpoint IP</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="lname" placeholder="Endpoint IP Here">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="email1" class="col-sm-3 text-end control-label col-form-label fas fa-cogs"> Machine</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="email1" placeholder="Machine Name Here">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label fab fa-html5"> Web Aplication</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="cono1" placeholder="Web Aplication Here">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-id-card"> Public IP</label>
-                        <div class="col-sm-9">
-                          <input type="text" class="form-control" id="cono1" placeholder="Public IP Here">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-code"> FrameWork</label>
-                        <div class="col-sm-9">
-                          <input type="text" class="form-control" id="cono1" placeholder="FrameWork Here">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="border-top">
-                        <div class="card-body">
-                          <button type="button" class="btn btn-primary far fa-save">
-                             Submit
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
                 
+                  </div> -->
+                  <button id="openFormBtn" class="btn btn-primary">Click for the input</button>
+                  <div id="formPopup" class="popup" style="display: none;">
+                      <div class="popup-content">
+                          <span class="close-btn">&times;</span>
+                          <h2>Form Title</h2>
+                          <form class="form-horizontal">
+                            <div class="card-body">
+                              <h4 class="card-title">Insert Data to Add Asset Pelindo</h4>
+                              <div class="form-group row">
+                                <label for="fname" class="col-sm-3 text-end control-label col-form-label fas fa-flag"> Regional</label>
+                                <div class="col-sm-9">
+                                  <input type="text" class="form-control" id="fname" placeholder="Regional Here">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-desktop "> Endpoint Hostname</label>
+                                <div class="col-sm-9">
+                                  <input type="text" class="form-control" id="lname" placeholder="Endpoint Hostname Here">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-info-circle"> Endpoint IP</label>
+                                <div class="col-sm-9">
+                                  <input type="text" class="form-control" id="lname" placeholder="Endpoint IP Here">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="email1" class="col-sm-3 text-end control-label col-form-label fas fa-cogs"> Machine</label>
+                                <div class="col-sm-9">
+                                  <input type="text" class="form-control" id="email1" placeholder="Machine Name Here">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="cono1" class="col-sm-3 text-end control-label col-form-label fab fa-html5"> Web Aplication</label>
+                                <div class="col-sm-9">
+                                  <input type="text" class="form-control" id="cono1" placeholder="Web Aplication Here">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-id-card"> Public IP</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="cono1" placeholder="Public IP Here">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-code"> FrameWork</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="cono1" placeholder="FrameWork Here">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="border-top">
+                                  <div class="card-body">
+                                    <button type="button" class="btn btn-primary far fa-save">
+                                       Submit
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                      </div>
+                  </div>
               </div>
         <div class="card">
             <div class="card-body">
@@ -99,11 +106,6 @@
                 <!--
                     Here The Data
                 -->
-      
-
-
-
-
 <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -129,5 +131,4 @@
     <script>
          $("#zero_config").DataTable();
     </script>
-  
 </tbody></table></div></div></div></div></div>
