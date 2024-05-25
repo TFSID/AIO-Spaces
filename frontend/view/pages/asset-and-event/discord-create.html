@@ -5,79 +5,65 @@
         <div class="page-breadcrumb">
           <div class="row">
             <div class="col-12 d-flex no-block align-items-center">
-              <h4 class="page-title">Dashboard</h4>
+              <h1 class="page-title">Dashboard Event for Discord
+              </h1>
               <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
               </nav></div>
             </div>
           </div>
         </div>
-      
-        <div class="row">
-            <div class="col-md-12">
-              <div class="card">
+        <button id="openFormBtn" class="btn btn-primary">Click for the input</button>
+        <div id="formPopup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Insert Data to Add Event for Discord</h2>
                 <form class="form-horizontal">
                   <div class="card-body">
-                    <h4 class="card-title">Insert to Add Event !</h4>
+                    <h4 class="card-title"></h4>
                     <div class="form-group row">
-                      <label for="fname" class="col-sm-3 text-end control-label col-form-label fas fa-flag"> Jenis Serangan / Anomali</label>
+                      <label for="fname" class="col-sm-3 text-end control-label col-form-label fas fa-id-card"> DateTime</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="fname" placeholder="Jenis Serangan / Anomali">
+                        <input type="date" class="form-control" id="datetime">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-tags "> Tags</label>
+                      <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-desktop "> Source</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="lname" placeholder="Tags">
+                        <input type="text" class="form-control" id="lname" placeholder="Source">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-signal"> Severity</label>
+                      <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-info-circle"> DestinationIP</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="lname" placeholder="Severity">
+                        <input type="text" class="form-control" id="lname" placeholder="Destination Here">
                       </div>
                     </div>
                     <div class="form-group row">
-                        <label for="cono1" class="col-sm-3 text-end control-label col-form-label far fa-sticky-note"> description</label>
+                      <label for="email1" class="col-sm-3 text-end control-label col-form-label fas fa-desktop"> EndpointHostname</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="email1" placeholder="EndpointHostname Here">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-code"> payload</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="cono1" placeholder="payload Here">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-flag"> Tags</label>
                         <div class="col-sm-9">
-                          <textarea class="form-control" placeholder="description">                        </textarea>
+                          <input type="text" class="form-control" id="cono1" placeholder="Tags Here">
                         </div>
                       </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label fab fa-react"> Action</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="cono1" placeholder="Action">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                       <div class="form-group row">
-                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label fab fa-rocketchat"> Message</label>
-                        <div class="col-sm-9">
-                          <input type="text" class="form-control" id="cono1" placeholder="Message">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="form-group row">
-                       <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-list"> Remarks</label>
-                         <div class="col-sm-9">
-                           <input type="text" class="form-control" id="cono1" placeholder="Remarks">
-                         </div>
-                       </div>
                       <div class="form-group row">
                         <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-code"> uuid</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" id="cono1" placeholder="uuid">
+                          <input type="text" class="form-control" id="cono1" placeholder="uuid Here">
                         </div>
                       </div>
-                      <div class="form-group row">
-                        <label class="col-md-3">File Upload</label>
-                        <div class="col-md-9">
-                          <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="validatedCustomFile" required="">
-                            <label class="custom-file-label" for="validatedCustomFile"></label>
                     </div>
-                        </div>
                     <div class="border-top">
                         <div class="card-body">
                           <button type="button" class="btn btn-primary far fa-save">
@@ -85,13 +71,12 @@
                           </button>
                         </div>
                       </div>
-                    
-                  </div>
-                
-              </div>
+                    </form>
+            </div>
+        </div>         
         <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Here For Event has Added !</h5>
+              <h5 class="card-title">Here For Event Discord has Added !</h5>
               <div class="table-responsive">
                 <label>Show 
                     <select name="zero_config_length" aria-controls="zero_config" class="form-control form-control-sm">
