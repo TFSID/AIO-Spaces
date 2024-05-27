@@ -73,17 +73,18 @@ def generate_attack_report():
     template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,content=content,footer=footer,js=js)
     return template
 
-@app.route('/dns')
-def generate_dns_report():
+# @app.route('/dns')
+# def generate_dns_report():
     
-    navbar = render_template('components/navbar.html')
-    header = render_template('components/header.html')
-    sidebar = render_template('components/sidebar.html')
-    footer = render_template('components/footer.html')
-    content = render_template('pages/generate-report/dns.html')
-    # import dashboard pages
-    template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,footer=footer,content=content)
-    return template
+#     navbar = render_template('components/navbar.html')
+#     header = render_template('components/header.html')
+#     sidebar = render_template('components/sidebar.html')
+#     footer = render_template('components/footer.html')
+#     content = render_template('pages/generate-report/dns.html')
+#     js = render_template('components/dns-chart.html')
+#     # import dashboard pages
+#     template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,content=content,footer=footer,js=js)
+#     return template
 
 @app.route('/malware')
 def generate_malware_report():
