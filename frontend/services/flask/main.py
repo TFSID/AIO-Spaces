@@ -68,7 +68,7 @@ def generate_attack_report():
     sidebar = render_template('components/sidebar.html')
     footer = render_template('components/footer.html')
     content = render_template('pages/generate-report/attack.html')
-    js = render_template('components/attack-chart.html')
+    js = render_template('components/chart.html')
     # import dashboard pages
     template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,content=content,footer=footer,js=js)
     return template
