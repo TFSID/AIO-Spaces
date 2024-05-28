@@ -1,76 +1,68 @@
-$(function () {
-  var data = [5, 10, 15, 20, 15, 30, 40],
-    totalPoints = 100;
-  function getRandomData() {
-    if (data.length > 0) data = data.slice(1);
-    // Do a random walk
-    while (data.length < totalPoints) {
-      var prev = data.length > 0 ? data[data.length - 1] : 10,
-        y = prev + Math.random() * 10 - 5;
-      if (y < 0) {
-        y = 0;
-      } else if (y > 100) {
-        y = 100;
+// Sample hierarchical data
+const data = {
+  name: "root",
+  children: [
+      {
+          name: "child1",
+          children: [
+              { name: "child1-1" },
+              { name: "child1-2" }
+          ]
+      },
+      { name: "child2" }
+  ]
+};
+
+// Function to calculate chart height
+function calculateChartHeight(root, barStep, marginTop, marginBottom) {
+  let max = 1;
+  root.each(d => {
+      if (d.children) {
+          max = Math.max(max, d.children.length);
       }
-      data.push(y);
-    }
-    // Zip the generated y values with the x values
-    var res = [];
-    for (var i = 0; i < data.length; ++i) {
-      res.push([i, data[i]]);
-    }
-    return res;
-  }
-  // Set up the control widget
-  var updateInterval = 1000;
-  $("#updateInterval")
-    .val(updateInterval)
-    .change(function () {
-      var v = $(this).val();
-      if (v && !isNaN(+v)) {
-        updateInterval = +v;
-        if (updateInterval < 1) {
-          updateInterval = 1;
-        } else if (updateInterval > 1000) {
-          updateInterval = 1000;
-        }
-        $(this).val("" + updateInterval);
-      }
-    });
-  var plot = $.plot("#placeholder1", [getRandomData()], {
-    series: {
-      shadowSize: 1, // Drawing is faster without shadows
-      lines: { fill: true, fillColor: "transparent" },
-    },
-    yaxis: {
-      min: 0,
-      max: 100,
-      show: true,
-    },
-    xaxis: {
-      show: false,
-    },
-    colors: ["#fe5419"],
-    grid: {
-      color: "#AFAFAF",
-      hoverable: true,
-      borderWidth: 0,
-      backgroundColor: "transparent",
-    },
-    tooltip: true,
-    tooltipOpts: {
-      content: "Visits: %x",
-      defaultTheme: false,
-    },
   });
-  window.onresize = function (event) {
-    $.plot($("#placeholder1"), [getRandomData()]);
-  };
-  function update() {
-    plot.setData([getRandomData()]);
-    // Since the axes don't change, we don't need to call plot.setupGrid()
-    plot.draw();
-    setTimeout(update, updateInterval);
-  }
-  update();
+  return max * barStep + marginTop + marginBottom;
+}
+
+// Function to create the chart
+function createChart(root, width, height, barStep) {
+  const svg = d3.create("svg")
+      .attr("viewBox", [0, 0, width, height])
+      .attr("width", width)
+      .attr("height", height)
+      .attr("style", "max-width: 100%; height: auto;");
+
+  const g = svg.append("g")
+      .attr("transform", `translate(20,20)`);
+
+  const node = g.selectAll(".node")
+      .data(root.descendants())
+      .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", (d, i) => `translate(0,${i * barStep})`);
+
+  node.append("rect")
+      .attr("width", d => d.depth * 50 + 200)
+      .attr("height", barStep - 1);
+
+  node.append("text")
+      .attr("dy", "0.35em")
+      .attr("x", 5)
+      .attr("y", barStep / 2)
+      .text(d => d.data.name);
+
+  return svg.node();
+}
+
+// Initialize chart
+document.addEventListener('DOMContentLoaded', () => {
+  const root = d3.hierarchy(data);
+  const width = 800;
+  const barStep = 30;
+  const marginTop = 20;
+  const marginBottom = 20;
+  const height = calculateChartHeight(root, barStep, marginTop, marginBottom);
+
+  const chart = createChart(root, width, height, barStep);
+  document.getElementById('chart').appendChild(chart);
 });
