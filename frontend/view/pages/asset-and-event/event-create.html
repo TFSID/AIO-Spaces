@@ -5,7 +5,7 @@
         <div class="page-breadcrumb">
           <div class="row">
             <div class="col-12 d-flex no-block align-items-center">
-              <h1 class="page-title">Dashboard Create Event </h1>
+              <h1 class="page-title">Dashboard Create Event WorkBench </h1>
               <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
               </nav></div>
@@ -16,7 +16,7 @@
         <div id="formPopup" class="popup" style="display: none;">
             <div class="popup-content">
                 <span class="close-btn">&times;</span>
-                <h2>Insert Data to Add Event for Discord</h2>
+                <h2>Insert Data to Add Event for WorkBench</h2>
                 <form class="form-horizontal">
                   <div class="card-body">
                     <h4 class="card-title"></h4>
@@ -27,39 +27,51 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-desktop "> Source</label>
+                      <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-desktop "> Title/Judul Insiden</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="lname" placeholder="Source">
+                        <input type="text" class="form-control" id="lname" placeholder="Title/Judul Insiden">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-info-circle"> DestinationIP</label>
+                      <label for="lname" class="col-sm-3 text-end control-label col-form-label fas fa-info-circle"> Jenis Serangan:</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="lname" placeholder="Destination Here">
+                        <input type="text" class="form-control" id="lname" placeholder="Jenis Serangan">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="email1" class="col-sm-3 text-end control-label col-form-label fas fa-desktop"> EndpointHostname</label>
+                      <label for="email1" class="col-sm-3 text-end control-label col-form-label fas fa-desktop"> Tags:</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="email1" placeholder="EndpointHostname Here">
+                        <input type="text" class="form-control" id="email1" placeholder="Tags: Here">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-code"> payload</label>
+                      <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-code"> severity</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="cono1" placeholder="payload Here">
+                        <input type="text" class="form-control" id="cono1" placeholder="severity Here">
                       </div>
                     </div>
                     <div class="form-group row">
-                        <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-flag"> Tags</label>
+                        <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-flag"> Description</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" id="cono1" placeholder="Tags Here">
+                          <input type="text" class="form-control" id="cono1" placeholder="Description Here">
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-code"> uuid</label>
                         <div class="col-sm-9">
                           <input type="text" class="form-control" id="cono1" placeholder="uuid Here">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-code"> Search Query</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="cono1" placeholder="Search Query Here">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="cono1" class="col-sm-3 text-end control-label col-form-label fas fa-code"> Action</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="cono1" placeholder="Action Here">
                         </div>
                       </div>
                     </div>
@@ -111,20 +123,22 @@
                                   </div>
                                 </div>
                                 <div class="el-card-content">
-                                  <h4 class="mb-0">Title</h4>
-                                  <span class="text-left">Jenis Serangan / Anomali</span>
+                                  <h4 class="mb-0">Title/Judul Insiden</h4>
+                                  <span class="text-left"> DateTime:</span>
                                   <br>
-                                  <span class="text-left position-left">Tags</span>
+                                  <span class="text-left position-left">Jenis Serangan:</span>
                                   <br>
-                                  <span class="text-left">Severity</span>
+                                  <span class="text-left">Tags:</span>
                                   <br>
-                                  <span class="text-left">description</span>
+                                  <span class="text-left">severity:</span>
                                   <br>
-                                  <span class="text-left">Action</span>
+                                  <span class="text-left">Description:</span>
                                   <br>
-                                  <span class="text-left">Message</span>
+                                  <span class="text-left">uuid:</span>
                                   <br>
-                                  <span class="text-left">uuid</span>
+                                  <span class="text-left"> Search Query:</span>
+                                  <br>
+                                  <span class="text-left"> Action</span>
                                 </div>
                               </div>
                             </div>
