@@ -1,0 +1,204 @@
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+      <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+          <h3 class="page-title">Dashboard Generate Report for 8 Hour</h3>
+          <div class="ms-auto text-end">
+          </div>
+        </div>
+      </div>
+    </div>
+    <p></p>
+    
+    <!-- Dropdown untuk memilih file -->
+    <!-- <select id="fileDropdown">
+     <option value="file1.pdf">Download CSV</option>
+      <option value="file2.zip">Download Parsed Data</option>
+    <!- Tambahkan opsi lain jika diperlukan -->
+    <!--Generate Report for Attack -->   
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-md-flex align-items-center">
+              <div>
+                <button type="button" class="btn btn-info">Generate Here!</button>
+                <br>
+                <br>
+                <h4 class="card-title">Data Attack Report</h4>
+                <h5 class="card-subtitle">Overview of last 8 Hour</h5>
+              </div>
+            </div>
+            <select id="" class="btn-info">
+              <option value="pdf">download CSV</option>
+              <option value="parsed">download parsed data</option>
+            </select>        
+            <!-- Tombol untuk memulai unduhan -->
+            <button onclick="downloadFile()" class="btn-info">Unduh File</button>   
+              <!-- chart -->  
+                <script src="https://d3js.org/d3.v7.min.js"></script>
+                  <!-- <script src="chart.js" defer></script> -->
+                  <div id="chartattack"></div>
+              <!-- End Chart-->
+              <div class="col-lg-3">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="bg-dark p-10 text-white text-center">
+                      <i class="fas fa-arrow-circle-up fs-3 mb-1 font-16"></i>
+                      <h5 class="mb-0 mt-1">2540</h5>
+                      <small class="font-light">Total Source</small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="bg-dark p-10 text-white text-center">
+                      <i class="fas fa-arrow-alt-circle-down  fs-3 mb-1 font-16"></i>
+                      <h5 class="mb-0 mt-1">120</h5>
+                      <small class="font-light">Total Destination</small>
+                    </div>
+                  </div>
+                  <div class="col-6 mt-3">
+                    <div class="bg-dark p-10 text-white text-center">
+                      <i class="fas fa-code fs-3 mb-1 font-16"></i>
+                      <h5 class="mb-0 mt-1">656</h5>
+                      <small class="font-light">Total Request</small>
+                    </div>
+                  </div>
+                  <div class="col-6 mt-3">
+                    <div class="bg-dark p-10 text-white text-center">
+                      <i class=" fas fa-bolt fs-3 mb-1 font-16"></i>
+                      <h5 class="mb-0 mt-1">9540</h5>
+                      <small class="font-light">Total Rulename</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <!--Generate Report for DNS-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-md-flex align-items-center">
+                        <div> 
+                          <h4 class="card-title">Data DNS Report</h4>
+                          <h5 class="card-subtitle">Overview of last 8 Hour</h5>
+                        </div>
+                      </div>
+                      <select id="" class="btn-info">
+                        <option value="pdf">download CSV</option>
+                        <option value="parsed">download parsed data</option>
+                      </select>
+                      <button onclick="downloadFile()" class="btn-info">Unduh File</button>   
+                      <!-- chart -->  
+                        <script src="https://d3js.org/d3.v7.min.js"></script>
+                          <!-- <script src="chart.js" defer></script> -->
+                      <div id="chartdns"></div>
+                      <!-- End Chart-->
+                      <br>
+                      <div class="col-lg-3">
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="bg-dark p-10 text-white text-center">
+                              <i class="fas fa-arrow-circle-up fs-3 mb-1 font-16"></i>
+                              <h5 class="mb-0 mt-1">2540</h5>
+                              <small class="font-light">Total Source</small>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="bg-dark p-10 text-white text-center">
+                              <i class="fas fa-arrow-alt-circle-down  fs-3 mb-1 font-16"></i>
+                              <h5 class="mb-0 mt-1">120</h5>
+                              <small class="font-light">Total Destination</small>
+                            </div>
+                          </div>
+                          <div class="col-6 mt-3">
+                            <div class="bg-dark p-10 text-white text-center">
+                              <i class="fas fa-code fs-3 mb-1 font-16"></i>
+                              <h5 class="mb-0 mt-1">656</h5>
+                              <small class="font-light">Total Request</small>
+                            </div>
+                          </div>
+                          <div class="col-6 mt-3">
+                            <div class="bg-dark p-10 text-white text-center">
+                              <i class=" fas fa-bolt fs-3 mb-1 font-16"></i>
+                              <h5 class="mb-0 mt-1">9540</h5>
+                              <small class="font-light">Total Rulename</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                        <!--Generate Report for DNS-->
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="d-md-flex align-items-center">
+                                  <div> 
+                                    <h4 class="card-title">Data Malware Report</h4>
+                                    <h5 class="card-subtitle">Overview of last 8 Hour</h5>
+                                  </div>
+                                </div>
+                                <select id="" class="btn-info">
+                                  <option value="pdf">download CSV</option>
+                                  <option value="parsed">download parsed data</option>
+                                </select>
+                                <button onclick="downloadFile()" class="btn-info">Unduh File</button>   
+              <!-- chart -->  
+                <script src="https://d3js.org/d3.v7.min.js"></script>
+                  <!-- <script src="chart.js" defer></script> -->
+              <div id="chartmalware"></div>
+              <!-- End Chart-->
+                                  <div class="col-lg-3">
+                                    <div class="row">
+                                      <div class="col-6">
+                                        <div class="bg-dark p-10 text-white text-center">        
+                                          <i class="fas fa-desktop fs-3 mb-1 font-16"></i>
+                                          <h5 class="mb-0 mt-1">2540</h5>
+                                          <small class="font-light">Total EndpointHostname</small>
+                                        </div>
+                                      </div>
+                                      <div class="col-6">
+                                        <div class="bg-dark p-10 text-white text-center">
+                                          <i class="fas fa-file fs-3 mb-1 font-16"></i>
+                                          <h5 class="mb-0 mt-1">120</h5>
+                                          <small class="font-light">Total Filename</small>
+                                        </div>
+                                      </div>
+                                      <div class="col-6 mt-3">
+                                        <div class="bg-dark p-10 text-white text-center">
+                                          <i class="fa fa-reddit-alien fs-3 mb-1 font-16"></i>
+                                          <h5 class="mb-0 mt-1">656</h5>
+                                          <small class="font-light">Total Malname</small>
+                                        </div>
+                                      </div>
+                                      <div class="col-6 mt-3">
+                                        <div class="bg-dark p-10 text-white text-center">
+                                          <i class=" fas fa-bolt fs-3 mb-1 font-16"></i>
+                                          <h5 class="mb-0 mt-1">9540</h5>
+                                          <small class="font-light">Total ActResult</small>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+              <script>
+                function downloadFile() {
+                  // Mendapatkan nilai terpilih dari dropdown
+                  var selectedFile = document.getElementById("fileDropdown").value;
+                  
+                  // Membuat link untuk mengunduh file
+                  var downloadLink = document.createElement("a");
+                  downloadLink.href = selectedFile;
+                  
+                  // Mengatur atribut untuk mengunduh file
+                  downloadLink.download = selectedFile;
+                  
+                  // Mengklik link untuk memulai unduhan
+                  downloadLink.click();
+                }
+                </script>
+
+</table></div></div></div></div></div></div></div>

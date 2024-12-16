@@ -68,35 +68,48 @@ def generate_attack_report():
     sidebar = render_template('components/sidebar.html')
     footer = render_template('components/footer.html')
     content = render_template('pages/generate-report/attack.html')
-    js = render_template('components/chart.html')
+    js = render_template('components/chart-8-hours.html')
     # import dashboard pages
     template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,content=content,footer=footer,js=js)
     return template
 
-# @app.route('/dns')
-# def generate_dns_report():
+#     @app.route('/monitoring')
+# def live_monitoring():
     
 #     navbar = render_template('components/navbar.html')
 #     header = render_template('components/header.html')
 #     sidebar = render_template('components/sidebar.html')
 #     footer = render_template('components/footer.html')
-#     content = render_template('pages/generate-report/dns.html')
-#     js = render_template('components/dns-chart.html')
+#     content = render_template('pages/live-monitoring/monitoring.html')
+#     # js = render_template('components/chart.html')
 #     # import dashboard pages
-#     template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,content=content,footer=footer,js=js)
+#     template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,content=content,footer=footer)
 #     return template
 
-@app.route('/malware')
-def generate_malware_report():
+@app.route('/R2')
+def generate_R2_report():
     
     navbar = render_template('components/navbar.html')
     header = render_template('components/header.html')
     sidebar = render_template('components/sidebar.html')
     footer = render_template('components/footer.html')
-    content = render_template('pages/generate-report/malware.html')
+    content = render_template('pages/generate-report/R2.html')
+    js = render_template('components/chart-R2.html')
     # import dashboard pages
-    template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,footer=footer,content=content)
+    template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,content=content,footer=footer,js=js)
     return template
+
+# @app.route('/malware')
+# def generate_malware_report():
+    
+#     navbar = render_template('components/navbar.html')
+#     header = render_template('components/header.html')
+#     sidebar = render_template('components/sidebar.html')
+#     footer = render_template('components/footer.html')
+#     content = render_template('pages/generate-report/malware.html')
+#     # import dashboard pages
+#     template = render_template('pages/layout.html',sidebar=sidebar, header=header, navbar=navbar,footer=footer,content=content)
+#     return template
 
 @app.route('/chart')
 def chart():
